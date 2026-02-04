@@ -1,8 +1,8 @@
 # Algorithm Arena 🧠⚔️
 
-Algorithm Arena is a personal repository created to practice and master **Data Structures and Algorithms (DSA)** through consistent coding and problem-solving.
+**Algorithm Arena** is a personal repository created to practice and master **Data Structures and Algorithms (DSA)** through consistent coding and problem-solving.
 
-This repository contains well-structured, optimized solutions to common DSA problems, written while learning core concepts and preparing for coding interviews.
+This repository contains well-structured and optimized solutions to common DSA problems, written while learning core concepts and preparing for coding interviews.
 
 ---
 
@@ -28,6 +28,7 @@ This repository contains well-structured, optimized solutions to common DSA prob
 ---
 
 ## 📂 Repository Structure
+```text
 algorithm-arena/
 │
 ├── arrays/
