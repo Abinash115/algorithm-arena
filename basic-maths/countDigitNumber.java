@@ -31,3 +31,5 @@ public class countDigitNumber {
     System.out.println(countDigitsLog(n));  // Time complexity : O(log10(N)) Space complexity : O(1)
   }
 }
+
+// https://www.geeksforgeeks.org/problems/count-total-digits-in-a-number/1
