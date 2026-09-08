@@ -23,3 +23,4 @@ public class secondLargest {
 }
 
 // https://www.geeksforgeeks.org/problems/second-largest3735/1
+// https://www.geeksforgeeks.org/problems/find-the-smallest-and-second-smallest-element-in-an-array3226/1
