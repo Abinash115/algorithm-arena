@@ -55,3 +55,5 @@ public class firstAndLastOccourence {
     System.out.println(firstAndLastOccourence(arr, target)); // 2 3
   }
 }
+
+// https://www.geeksforgeeks.org/problems/first-and-last-occurrences-of-x3116/1
