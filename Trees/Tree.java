@@ -1,4 +1,5 @@
 package Trees;
+import java.util.*;
 
 public class Tree {
    public static class Node{
@@ -40,6 +41,53 @@ public class Tree {
     System.out.print(root.data + " ");
    }
 
+   public static List<List<Integer>> levelOrder(Node root){
+    List<List<Integer>> ans = new ArrayList<>();
+      if(root == null){
+         return ans;
+      }
+      Queue<Node> q = new LinkedList<>();
+      q.add(root);
+      while(!q.isEmpty()){
+         int size = q.size();
+         List<Integer> level = new ArrayList<>();
+         for(int i = 0; i < size; i++){
+            Node curr = q.poll();
+            level.add(curr.data);
+            if(curr.left != null){
+               q.add(curr.left);
+            }
+            if(curr.right != null){
+               q.add(curr.right);
+            }
+         }
+         ans.add(level);
+      }
+      return ans;
+   }
+
+   public static List<Integer> inorderTraversal(Node root) {
+        List<Integer> inorder = new ArrayList<>();
+        Stack<Node> st = new Stack<Node>();
+        Node node = root;
+        while(true){
+            if(node != null){
+                st.push(node);
+                node = node.left;
+            }
+            else{
+                if(st.isEmpty()){
+                    break;
+                }else{
+                    node = st.pop();
+                    inorder.add(node.data);
+                    node = node.right;
+                }
+            }
+        }
+        return inorder;
+    }
+
    public static void main(String[] args){
       Node root = new Node(4);
       root.left = new Node(2);
@@ -55,6 +103,12 @@ public class Tree {
       inOrder(root);
       System.out.println();
       postOrder(root);
+      System.out.println();
+      // List<List<Integer>> ans = levelOrder(root);
+      // for(List<Integer> level : ans){
+      //    System.out.println(level);
+      // }
+      System.out.println(inorderTraversal(root));
    }
 }
 
@@ -159,5 +213,8 @@ function main(){
     postOrder(root);
 }
 
-
+https://leetcode.com/problems/binary-tree-preorder-traversal/submissions/2141109092/
+https://leetcode.com/problems/binary-tree-inorder-traversal/description/
+https://leetcode.com/problems/binary-tree-postorder-traversal/submissions/2141111055/
+https://leetcode.com/problems/binary-tree-level-order-traversal/submissions/2141117338/
 */
